@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     updateApprovedList();
 
     checkButton.addEventListener("click", () => {
-        const number = numberInput.value;
+        const number = numberInput.value.trim();
         
         if (!number || number < 1 || number > 100) {
             alert("Please enter a number between 1 and 100.");
@@ -71,6 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 clearInterval(countdown);
                 nameSection.classList.add("hidden");
                 alert(`Time ran out! Number ${selectedNumber} is now available again.`);
+                selectedNumber = null;
             }
         }, 1000);
     }
