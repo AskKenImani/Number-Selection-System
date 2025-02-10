@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Selection</title>
+    <link rel="stylesheet" href="Styles/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="instructions">
+            <h2>📌 Instructions for Using the Number Selection System</h2>
+            
+            <h3>1️⃣ Enter a number (1-100).</h3>
+            <p>Type a number in the input field and click <strong>"Check Availability"</strong>.</p>
+            <p>If the number is already taken, an alert will notify you to choose another.</p>
+        
+            <h3>2️⃣ If available, a 30-second countdown starts.</h3>
+            <p>You will see a timer and a new input field for entering your <strong>name</strong>.</p>
+        
+            <h3>3️⃣ Enter your name and confirm within 30 seconds.</h3>
+            <p>Type your name and click <strong>"Confirm"</strong> before the timer runs out.</p>
+            <p>If you don’t confirm within 30 seconds, the number is released.</p>
+        
+            <h3>4️⃣ Approved numbers are displayed in a list.</h3>
+            <p>Once confirmed, your number and name will be added to the list of <strong>approved numbers</strong>.</p>
+        
+            <h3>5️⃣ Data is saved even after refreshing the page.</h3>
+            <p>Numbers remain <strong>reserved</strong> after a page reload because they are stored in <strong>localStorage</strong>.</p>
+        
+            <p><strong>📌 Note:</strong> If a number is already taken, it cannot be selected again.</p>
+        </div>        
+        <h2>Pick a Number (1-100)</h2>
+        <input type="number" id="numberInput" min="1" max="100" placeholder="Enter a number">
+        <button id="checkNumber">Check Availability</button>
+
+        <div id="nameSection" class="hidden">
+            <p id="timer"></p>
+            <input type="text" id="nameInput" placeholder="Enter your name">
+            <button id="confirmSelection">Confirm</button>
+        </div>
+
+        <h3>Approved Numbers</h3>
+        <ul id="approvedList"></ul>
+    </div>
+
+    <script src="JavaScripts/scripts.js"></script>
+</body>
+</html>
